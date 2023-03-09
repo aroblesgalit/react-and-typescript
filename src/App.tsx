@@ -16,7 +16,8 @@ const App: React.FC = () => {
         id: Date.now(),
         todo: todo,
         isDone: false
-      }])
+      }]);
+      setTodo('')
     }
     
   }
