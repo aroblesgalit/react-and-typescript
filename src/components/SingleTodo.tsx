@@ -2,6 +2,7 @@ import React from 'react'
 import { Todo } from '../model'
 import { AiFillDelete, AiFillEdit } from 'react-icons/ai'
 import { MdDone } from 'react-icons/md'
+import './styles.css'
 
 type Props = {
     todo: Todo,
@@ -12,7 +13,7 @@ type Props = {
 const SingleTodo = ({todo, todos, setTodos}:Props) => {
   return (
     <form className='todos__single'>
-        <span className="toos__single--text">{todo.todo}</span>
+        <span className="todos__single--text">{todo.todo}</span>
         <div>
             <span className="icon">
                 <AiFillEdit />
