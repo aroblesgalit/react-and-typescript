@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Todo } from '../model'
 import { AiFillDelete, AiFillEdit } from 'react-icons/ai'
 import { MdDone } from 'react-icons/md'
@@ -11,6 +11,9 @@ type Props = {
 }
 
 const SingleTodo = ({todo, todos, setTodos}:Props) => {
+
+    const [edit, setEdit] = useState<boolean>(false);
+    const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
     const handleDone = (id: number) => {
         setTodos(
